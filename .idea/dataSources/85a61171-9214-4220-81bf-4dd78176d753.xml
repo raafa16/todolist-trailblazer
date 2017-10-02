@@ -15,7 +15,8 @@
     </database>
     <schema id="5" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-10-02.21:30:58.382</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-10-03.01:02:35.173</IntrospectionTimestamp>
+      <IntrospectionStateNumber>668</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -34,5 +35,110 @@
     <schema id="10" parent="2" name="information_schema">
       <ObjectId>12121</ObjectId>
     </schema>
+    <sequence id="11" parent="5" name="todos_id_seq">
+      <ObjectId>16403</ObjectId>
+      <StateNumber>668</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="12" parent="5" name="ar_internal_metadata">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>667</StateNumber>
+    </table>
+    <table id="13" parent="5" name="schema_migrations">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>666</StateNumber>
+    </table>
+    <table id="14" parent="5" name="todos">
+      <ObjectId>16405</ObjectId>
+      <StateNumber>668</StateNumber>
+    </table>
+    <column id="15" parent="12" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+    </column>
+    <column id="16" parent="12" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>667</StateNumber>
+    </column>
+    <column id="17" parent="12" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+    </column>
+    <column id="18" parent="12" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+    </column>
+    <index id="19" parent="12" name="ar_internal_metadata_pkey">
+      <ObjectId>16401</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="20" parent="12" name="ar_internal_metadata_pkey">
+      <ObjectId>16402</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="13" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>666</StateNumber>
+    </column>
+    <index id="22" parent="13" name="schema_migrations_pkey">
+      <ObjectId>16393</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="13" name="schema_migrations_pkey">
+      <ObjectId>16394</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+      <SequenceName>todos_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;todos_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="25" parent="14" name="item">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>668</StateNumber>
+    </column>
+    <column id="26" parent="14" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+    </column>
+    <column id="27" parent="14" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+    </column>
+    <index id="28" parent="14" name="todos_pkey">
+      <ObjectId>16412</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="14" name="todos_pkey">
+      <ObjectId>16413</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>todos_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
