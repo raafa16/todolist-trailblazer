@@ -1,8 +1,7 @@
 module List::Cell
 
   class Show < Trailblazer::Cell
-    property :title
-    property :body
+    property :todo
 
     def edit
       link_to "Edit", edit_list_path(model.id)
