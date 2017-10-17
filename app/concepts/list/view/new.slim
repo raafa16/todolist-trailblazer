@@ -1,10 +1,10 @@
 .row.new
-  h1 New Todo
+  h1 New Task
 
   = simple_form_for model do |f|
     .row
       .col-sm-12
-        = f.input :todo, placeholder: "Todo", label: false
+        = f.input :todo, placeholder: "What do you want to do?", label: false
     .row
       .col-sm-12
         = f.submit 'Create Post'
