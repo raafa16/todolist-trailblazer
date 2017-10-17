@@ -56,6 +56,9 @@ GEM
       declarative-option (< 0.2.0)
       tilt (>= 1.4, < 3)
       uber (< 0.2.0)
+    cells-rails (0.0.8)
+      actionpack (>= 3.0)
+      cells (>= 4.1.6, < 5.0.0)
     cells-slim (0.0.5)
       cells (>= 4.0.1, < 6.0.0)
       slim (~> 3.0)
@@ -261,8 +264,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   byebug
   capybara (~> 2.13)
+  cells-rails
   cells-slim
   coffee-rails (~> 4.2)
   dry-validation

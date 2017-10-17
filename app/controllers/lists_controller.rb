@@ -40,7 +40,7 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1.json
   def update
     run List::Update do |result|
-      flash[:notice] = "#{result['model'].title} has been saved"
+      flash[:notice] = "#{result['model'].todo} has been saved"
       return redirect_to list_path(result['model'].id)
     end
 

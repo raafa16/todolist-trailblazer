@@ -7,6 +7,10 @@ end
 
 ruby '2.4.2'
 
+gem 'activerecord'
+
+gem 'cells-rails'
+
 gem 'cells-slim'
 
 gem 'dry-validation'

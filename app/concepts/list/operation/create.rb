@@ -11,7 +11,7 @@ class List::Create < Trailblazer::Operation
   step :notify!
 
   def notify!(options, model:, **)
-    options["result.notify"] = Rails.logger.info("New todo list #{model.title}.")
+    options["result.notify"] = Rails.logger.info("New todo list #{model.todo}.")
   end
   #~present end
 end
