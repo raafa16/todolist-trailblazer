@@ -5,7 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.4.2'
+
 gem 'cells-slim'
+
+gem 'dry-validation'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -15,6 +20,8 @@ gem 'puma', '~> 3.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'simple_form', '~> 3.5'
 # slim gem
 gem 'slim-rails'
 # trailblazer gem

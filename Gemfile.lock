@@ -80,12 +80,40 @@ GEM
       declarative-option (< 0.2.0)
       representable (>= 2.4.0, <= 3.1.0)
       uber (< 0.2.0)
+    dry-configurable (0.7.0)
+      concurrent-ruby (~> 1.0)
+    dry-container (0.6.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-core (0.3.4)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.2.0)
+    dry-logic (0.4.2)
+      dry-container (~> 0.2, >= 0.2.6)
+      dry-core (~> 0.2)
+      dry-equalizer (~> 0.2)
+    dry-types (0.12.1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1)
+      dry-container (~> 0.3)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.4, >= 0.4.2)
+      inflecto (~> 0.0.0, >= 0.0.2)
+    dry-validation (0.11.1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.4, >= 0.4.0)
+      dry-types (~> 0.12.0)
     erubi (1.6.1)
     execjs (2.7.0)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
+    inflecto (0.0.2)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -169,6 +197,9 @@ GEM
     selenium-webdriver (3.6.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     slim (3.0.8)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 1.3.3, < 2.1)
@@ -234,6 +265,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   cells-slim
   coffee-rails (~> 4.2)
+  dry-validation
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
@@ -241,6 +273,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form (~> 3.5)
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -250,6 +283,9 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+
+RUBY VERSION
+   ruby 2.4.2p198
 
 BUNDLED WITH
    1.16.0.pre.2
