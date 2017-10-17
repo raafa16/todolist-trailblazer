@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  # before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -53,7 +53,7 @@ class ListsController < ApplicationController
     run List::Delete
 
     flash[:alert] = 'Post deleted'
-    redirect_to list_path
+    redirect_to lists_path
   end
 
   private

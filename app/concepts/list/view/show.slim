@@ -1,12 +1,8 @@
 .post-preview
   h1
-    = model.todo
+    = todo
   p.post-meta
-    = "Posted at #{model.created_at.strftime("%d %B %Y")}"
+    = "Posted at #{created_at.strftime("%d %B %Y")}"
 .row
-  .col-sm-3.text-center
-    h6 = edit
-  .col-sm-6.text-center
-    h6 = delete
   .col-sm-3.text-center
     h6 = back
