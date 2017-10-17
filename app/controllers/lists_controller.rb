@@ -5,26 +5,26 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     run List::Index
-    render cell(List::Cell::Index, result['model']), layout: false
+    render cell(List::Cell::Index, result['model']), layout: true
   end
 
   # GET /lists/1
   # GET /lists/1.json
   def show
     run List::Show
-    render cell(List::Cell::Show, result['model']), layout: false
+    render cell(List::Cell::Show, result['model']), layout: true
   end
 
   # GET /lists/new
   def new
     run List::Create::Present
-    render cell(List::Cell::New, @form), layout: false
+    render cell(List::Cell::New, @form), layout: true
   end
 
   # GET /lists/1/edit
   def edit
     run List::Update::Present
-    render cell(List::Cell::Edit, @form), layout: false
+    render cell(List::Cell::Edit, @form), layout: true
   end
 
   # POST /lists
@@ -33,7 +33,7 @@ class ListsController < ApplicationController
     run List::Create do |result|
       return redirect_to lists_path
     end
-    render cell(List::Cell::New, @form), layout: false
+    render cell(List::Cell::New, @form), layout: true
   end
 
   # PATCH/PUT /lists/1
@@ -44,7 +44,7 @@ class ListsController < ApplicationController
       return redirect_to list_path(result['model'].id)
     end
 
-    render cell(List::Cell::Edit, @form), layout: false
+    render cell(List::Cell::Edit, @form), layout: true
   end
 
   # DELETE /lists/1
